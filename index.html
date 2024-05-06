@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, escala inicial=1.0">
+  <title> Raspador de produtos da Amazon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+
+      <h1 class="header__title">Amazon Product Scraper</h1>
+      <div class="header__content">
+        <input type="text" id="keywordInput" placeholder="Digite sua palavra-chave">
+        <button class="scrapeButton" id="scrapeButton">Scrape Products</button>
+      </div>
+    </header>
+    <p class="loading">Loading</p>
+    <main id="results">
+      <ul class="list-items">
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/51PPQf0BL8L._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/51PPQf0BL8L._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/51PPQf0BL8L._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/51PPQf0BL8L._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/51PPQf0BL8L._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/51PPQf0BL8L._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto" alt="Pires Madeira com Xicara Café Chá Chocolate 230ml Mesa Posta">
+          <h3 class="item-content__title">Pires Madeira com Xicara Café Chá Chocolate 230ml Mesa Posta</h3>
+          <span class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="5,0 de 5 estrelas"><span class="a-size-mini">5,0</span><span
+                class="a-letter-space"></span><i class="a-icon a-icon-star-small a-star-small-5 aok-align-bottom"><span
+                  class="a-icon-alt">5,0 de 5 estrelas</span></i> </span><span aria-label="3 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(3)</span></span></div>
+          </span>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/61xZ68GhNgL._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/61xZ68GhNgL._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/61xZ68GhNgL._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/61xZ68GhNgL._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/61xZ68GhNgL._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/61xZ68GhNgL._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="Jogo 6 Xicara Cafe Colorida Porcelana Pires Madeira 95ml - Mundo Da Porcelana (Verde)">
+          <h3 class="item-content__title">Jogo 6 Xicara Cafe Colorida Porcelana Pires Madeira 95ml - Mundo Da Porcelana
+            (Verde)</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,0 de 5 estrelas"><span class="a-size-mini">4,0</span><span
+                class="a-letter-space"></span><i class="a-icon a-icon-star-small a-star-small-4 aok-align-bottom"><span
+                  class="a-icon-alt">4,0 de 5 estrelas</span></i> </span><span aria-label="96 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(96)</span></span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/414+JNDt54L._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/414+JNDt54L._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/414+JNDt54L._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/414+JNDt54L._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/414+JNDt54L._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/414+JNDt54L._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="Wolff Coração Pearl Conjunto de Xícaras para Café com Pires de Cristal 4 Peças, Transparente, 85 ml">
+          <h3 class="item-content__title">Wolff Coração Pearl Conjunto de Xícaras para Café com Pires de Cristal 4
+            Peças, Transparente, 85 ml</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,8 de 5 estrelas"><span class="a-size-mini">4,8</span><span
+                class="a-letter-space"></span><i class="a-icon a-icon-star-small a-star-small-5 aok-align-bottom"><span
+                  class="a-icon-alt">4,8 de 5 estrelas</span></i> </span><span aria-label="560 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(560)</span></span></div>
+          <div class="a-row a-size-mini"><span class="a-size-mini a-color-secondary">Mais de 400 compras no mês
+              passado</span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/618StsUO5pL._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/618StsUO5pL._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/618StsUO5pL._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/618StsUO5pL._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/618StsUO5pL._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/618StsUO5pL._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="Jogo 6 Xicara Cafe Colorida Porcelana Pires Madeira 95ml - Mundo Da Porcelana (Branca)">
+          <h3 class="item-content__title">Jogo 6 Xicara Cafe Colorida Porcelana Pires Madeira 95ml - Mundo Da Porcelana
+            (Branca)</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,0 de 5 estrelas"><span class="a-size-mini">4,0</span><span
+                class="a-letter-space"></span><i class="a-icon a-icon-star-small a-star-small-4 aok-align-bottom"><span
+                  class="a-icon-alt">4,0 de 5 estrelas</span></i> </span><span aria-label="96 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(96)</span></span></div>
+          <div class="a-row a-size-mini"><span class="a-size-mini a-color-secondary">Mais de 100 compras no mês
+              passado</span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/51sFL1RL+1L._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/51sFL1RL+1L._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/51sFL1RL+1L._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/51sFL1RL+1L._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/51sFL1RL+1L._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/51sFL1RL+1L._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto" alt="Coração Xicara Cha Vidro 180ml">
+          <h3 class="item-content__title">Coração Xicara Cha Vidro 180ml</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,6 de 5 estrelas"><span class="a-size-mini">4,6</span><span
+                class="a-letter-space"></span><i
+                class="a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom"><span class="a-icon-alt">4,6 de 5
+                  estrelas</span></i> </span><span aria-label="26 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(26)</span></span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/51swYw1C7AL._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/51swYw1C7AL._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/51swYw1C7AL._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/51swYw1C7AL._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/51swYw1C7AL._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/51swYw1C7AL._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="Beruth Bombilla Yerba Mate Gourd, conjunto de xícaras de chá de aço inoxidável de 236 ml com tampa multifuncional, dois canudos e escovas de limpeza, caneca de café de parede dupla com isolamento">
+          <h3 class="item-content__title">Beruth Bombilla Yerba Mate Gourd, conjunto de xícaras de chá de aço inoxidável
+            de 236 ml com tampa
+            multifuncional, dois canudos e escovas de limpeza, caneca de café de parede dupla com isolamento</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,7 de 5 estrelas"><span class="a-size-mini">4,7</span><span
+                class="a-letter-space"></span><i
+                class="a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom"><span class="a-icon-alt">4,7 de 5
+                  estrelas</span></i> </span><span aria-label="25 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(25)</span></span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/510aU2GTcML._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/510aU2GTcML._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/510aU2GTcML._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/510aU2GTcML._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/510aU2GTcML._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/510aU2GTcML._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="Beruth Bombilla Yerba Mate Gourd, conjunto de xícaras de chá de aço inoxidável de 236 ml com tampa multifuncional, dois canudos e escovas de limpeza, caneca de café de parede dupla com isolamento">
+          <h3 class="item-content__title">Beruth Bombilla Yerba Mate Gourd, conjunto de xícaras de chá de aço inoxidável
+            de 236 ml com tampa
+            multifuncional, dois canudos e escovas de limpeza, caneca de café de parede dupla com isolamento</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,5 de 5 estrelas"><span class="a-size-mini">4,5</span><span
+                class="a-letter-space"></span><i
+                class="a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom"><span class="a-icon-alt">4,5 de 5
+                  estrelas</span></i> </span><span aria-label="17 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(17)</span></span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/31d-8yREdzL._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/31d-8yREdzL._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/31d-8yREdzL._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/31d-8yREdzL._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/31d-8yREdzL._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/31d-8yREdzL._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto" alt="Conjunto 4 Xícaras de Chá de Cristal sem Pires Pearl 180ml - Wolff">
+          <h3 class="item-content__title">Conjunto 4 Xícaras de Chá de Cristal sem Pires Pearl 180ml - Wolff</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,8 de 5 estrelas"><span class="a-size-mini">4,8</span><span
+                class="a-letter-space"></span><i class="a-icon a-icon-star-small a-star-small-5 aok-align-bottom"><span
+                  class="a-icon-alt">4,8 de 5 estrelas</span></i> </span><span aria-label="158 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(158)</span></span></div>
+          <div class="a-row a-size-mini"><span class="a-size-mini a-color-secondary">Mais de 100 compras no mês
+              passado</span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/31ZhZ6Ng48L._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/31ZhZ6Ng48L._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/31ZhZ6Ng48L._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/31ZhZ6Ng48L._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/31ZhZ6Ng48L._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/31ZhZ6Ng48L._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto" alt="Conjunto De 6 Xícaras Grandes 200 Ml Com Pires Quartier White - Oxford">
+          <h3 class="item-content__title">Conjunto De 6 Xícaras Grandes 200 Ml Com Pires Quartier White - Oxford</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,8 de 5 estrelas"><span class="a-size-mini">4,8</span><span
+                class="a-letter-space"></span><i class="a-icon a-icon-star-small a-star-small-5 aok-align-bottom"><span
+                  class="a-icon-alt">4,8 de 5 estrelas</span></i> </span><span aria-label="165 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(165)</span></span></div>
+          <div class="a-row a-size-mini"><span class="a-size-mini a-color-secondary">Mais de 50 compras no mês
+              passado</span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/51GsNQkYlGL._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/51GsNQkYlGL._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/51GsNQkYlGL._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/51GsNQkYlGL._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/51GsNQkYlGL._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/51GsNQkYlGL._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="1 Conjunto com 6 Xícaras de Chá Reta 200 Ml com Pires 14 Cm Donna Grécia, Biona, Donna Grécia 022934, Azul/Marfim">
+          <h3 class="item-content__title">1 Conjunto com 6 Xícaras de Chá Reta 200 Ml com Pires 14 Cm Donna Grécia,
+            Biona, Donna Grécia 022934,
+            Azul/Marfim</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,5 de 5 estrelas"><span class="a-size-mini">4,5</span><span
+                class="a-letter-space"></span><i
+                class="a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom"><span class="a-icon-alt">4,5 de 5
+                  estrelas</span></i> </span><span aria-label="182 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(182)</span></span></div>
+          <div class="a-row a-size-mini"><span class="a-size-mini a-color-secondary">Mais de 100 compras no mês
+              passado</span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/51XNcq8eMwL._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/51XNcq8eMwL._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/51XNcq8eMwL._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/51XNcq8eMwL._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/51XNcq8eMwL._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/51XNcq8eMwL._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="Beruth Bombilla Yerba Mate Gourd, conjunto de xícaras de chá de aço inoxidável de 236 ml com tampa multifuncional, dois canudos e escovas de limpeza, caneca de café de parede dupla com isolamento">
+          <h3 class="item-content__title">Beruth Bombilla Yerba Mate Gourd, conjunto de xícaras de chá de aço inoxidável
+            de 236 ml com tampa
+            multifuncional, dois canudos e escovas de limpeza, caneca de café de parede dupla com isolamento</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,7 de 5 estrelas"><span class="a-size-mini">4,7</span><span
+                class="a-letter-space"></span><i
+                class="a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom"><span class="a-icon-alt">4,7 de 5
+                  estrelas</span></i> </span><span aria-label="24 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(24)</span></span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/61jnkcOiDgL._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/61jnkcOiDgL._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/61jnkcOiDgL._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/61jnkcOiDgL._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/61jnkcOiDgL._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/61jnkcOiDgL._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="Beruth Cabaça de erva mate Bombilla, conjunto de xícara de chá de aço inoxidável de 236 ml com tampa multifuncional, dois canudos e escovas de limpeza, caneca de café de parede dupla com isolamento térmico anti-escaldante BR2302 (Preto)">
+          <h3 class="item-content__title">Beruth Cabaça de erva mate Bombilla, conjunto de xícara de chá de aço
+            inoxidável de 236 ml com tampa
+            multifuncional, dois canudos e escovas de limpeza, caneca de café de parede dupla com isolamento térmico
+            anti-escaldante BR2302 (Preto)</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,6 de 5 estrelas"><span class="a-size-mini">4,6</span><span
+                class="a-letter-space"></span><i
+                class="a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom"><span class="a-icon-alt">4,6 de 5
+                  estrelas</span></i> </span><span aria-label="156 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(156)</span></span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/51yMHs6-aES._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/51yMHs6-aES._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/51yMHs6-aES._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/51yMHs6-aES._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/51yMHs6-aES._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/51yMHs6-aES._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="Conjunto Copos Para Café Parede Dupla Sem Alça 80ml borossilicato dupla camada (6)">
+          <h3 class="item-content__title">Conjunto Copos Para Café Parede Dupla Sem Alça 80ml borossilicato dupla camada
+            (6)</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,6 de 5 estrelas"><span class="a-size-mini">4,6</span><span
+                class="a-letter-space"></span><i
+                class="a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom"><span class="a-icon-alt">4,6 de 5
+                  estrelas</span></i> </span><span aria-label="102 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(102)</span></span></div>
+          <div class="a-row a-size-mini"><span class="a-size-mini a-color-secondary">Mais de 100 compras no mês
+              passado</span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/51Se+Zz+40L._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/51Se+Zz+40L._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/51Se+Zz+40L._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/51Se+Zz+40L._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/51Se+Zz+40L._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/51Se+Zz+40L._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="Estojo com 6 Xícaras de de Chá com Pires. Modelo Redondo Voyage Coup. Branca. Fabricado pela Porcelana Schmidt.">
+          <h3 class="item-content__title">Estojo com 6 Xícaras de de Chá com Pires. Modelo Redondo Voyage Coup. Branca.
+            Fabricado pela Porcelana
+            Schmidt.</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,8 de 5 estrelas"><span class="a-size-mini">4,8</span><span
+                class="a-letter-space"></span><i class="a-icon a-icon-star-small a-star-small-5 aok-align-bottom"><span
+                  class="a-icon-alt">4,8 de 5 estrelas</span></i> </span><span aria-label="345 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(345)</span></span></div>
+          <div class="a-row a-size-mini"><span class="a-size-mini a-color-secondary">Mais de 100 compras no mês
+              passado</span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/41MufvzLJ0L._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/41MufvzLJ0L._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/41MufvzLJ0L._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/41MufvzLJ0L._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/41MufvzLJ0L._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/41MufvzLJ0L._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto" alt="Conjunto De 6 Xícaras Grandes 220 Ml Com Pires Ryo Pink Sand - Oxford">
+          <h3 class="item-content__title">Conjunto De 6 Xícaras Grandes 220 Ml Com Pires Ryo Pink Sand - Oxford</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,9 de 5 estrelas"><span class="a-size-mini">4,9</span><span
+                class="a-letter-space"></span><i class="a-icon a-icon-star-small a-star-small-5 aok-align-bottom"><span
+                  class="a-icon-alt">4,9 de 5 estrelas</span></i> </span><span aria-label="121 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(121)</span></span></div>
+          <div class="a-row a-size-mini"><span class="a-size-mini a-color-secondary">Mais de 50 compras no mês
+              passado</span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/41+vhYs+AwL._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/41+vhYs+AwL._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/41+vhYs+AwL._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/41+vhYs+AwL._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/41+vhYs+AwL._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/41+vhYs+AwL._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="Mimo Style Par de Copos Para Café Parede Dupla Com Alça, Material Vidro Borossilicato de, Capacidade de 80 ml, Resistente, Suporta Altas e Baixas Temperaturas, Não Queima as Mãos">
+          <h3 class="item-content__title">Mimo Style Par de Copos Para Café Parede Dupla Com Alça, Material Vidro
+            Borossilicato de, Capacidade de 80
+            ml, Resistente, Suporta Altas e Baixas Temperaturas, Não Queima as Mãos</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,5 de 5 estrelas"><span class="a-size-mini">4,5</span><span
+                class="a-letter-space"></span><i
+                class="a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom"><span class="a-icon-alt">4,5 de 5
+                  estrelas</span></i> </span><span aria-label="802 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(802)</span></span></div>
+          <div class="a-row a-size-mini"><span class="a-size-mini a-color-secondary">Mais de 100 compras no mês
+              passado</span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/61SVUo7gdsL._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/61SVUo7gdsL._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/61SVUo7gdsL._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/61SVUo7gdsL._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/61SVUo7gdsL._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/61SVUo7gdsL._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto" alt="JG XICARA DE CAFE 90ML 12PCS">
+          <h3 class="item-content__title">JG XICARA DE CAFE 90ML 12PCS</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,5 de 5 estrelas"><span class="a-size-mini">4,5</span><span
+                class="a-letter-space"></span><i
+                class="a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom"><span class="a-icon-alt">4,5 de 5
+                  estrelas</span></i> </span><span aria-label="231 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(231)</span></span></div>
+          <div class="a-row a-size-mini"><span class="a-size-mini a-color-secondary">Mais de 100 compras no mês
+              passado</span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/51-5U6r7CsL._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/51-5U6r7CsL._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/51-5U6r7CsL._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/51-5U6r7CsL._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/51-5U6r7CsL._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/51-5U6r7CsL._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="Mimo Style Mini Canecas Para Café Com 6 Peças Multicolor, Material de Cerâmica Com o Melhor Isolamento Térmico, Durabilidade Que Torna o Produto Sustentável (Colorida - 100ml)">
+          <h3 class="item-content__title">Mimo Style Mini Canecas Para Café Com 6 Peças Multicolor, Material de Cerâmica
+            Com o Melhor Isolamento
+            Térmico, Durabilidade Que Torna o Produto Sustentável (Colorida - 100ml)</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,4 de 5 estrelas"><span class="a-size-mini">4,4</span><span
+                class="a-letter-space"></span><i
+                class="a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom"><span class="a-icon-alt">4,4 de 5
+                  estrelas</span></i> </span><span aria-label="1.716 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(1.716)</span></span></div>
+          <div class="a-row a-size-mini"><span class="a-size-mini a-color-secondary">Mais de 100 compras no mês
+              passado</span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/51W5Xf7p1OL._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/51W5Xf7p1OL._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/51W5Xf7p1OL._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/51W5Xf7p1OL._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/51W5Xf7p1OL._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/51W5Xf7p1OL._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto"
+            alt="Jogo de 2 xícaras coração parede dupla em vidro borossilicato 150ml - Amigold">
+          <h3 class="item-content__title">Jogo de 2 xícaras coração parede dupla em vidro borossilicato 150ml - Amigold
+          </h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,4 de 5 estrelas"><span class="a-size-mini">4,4</span><span
+                class="a-letter-space"></span><i
+                class="a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom"><span class="a-icon-alt">4,4 de 5
+                  estrelas</span></i> </span><span aria-label="40 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(40)</span></span></div>
+          </p>
+        </li>
+        <li class="item-content">
+          <img class="item-content__img" src="https://m.media-amazon.com/images/I/51eM3gLxEGL._AC_SX148_SY213_QL70_.jpg"
+            srcset="https://m.media-amazon.com/images/I/51eM3gLxEGL._AC_SX148_SY213_QL70_.jpg 1x, https://m.media-amazon.com/images/I/51eM3gLxEGL._AC_SX222_SY320_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/51eM3gLxEGL._AC_SX296_SY426_QL65_.jpg 2x, https://m.media-amazon.com/images/I/51eM3gLxEGL._AC_SX370_SY533_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/51eM3gLxEGL._AC_SX444_SY639_QL65_.jpg 3x"
+            height="200px" width="auto" alt="Borboleta Xicara Cha Vidro 180ml">
+          <h3 class="item-content__title">Borboleta Xicara Cha Vidro 180ml</h3>
+          <p class="item-content__stars" style="display:flex;">Avaliação
+          <div class="a-row a-size-mini"><span aria-label="4,3 de 5 estrelas"><span class="a-size-mini">4,3</span><span
+                class="a-letter-space"></span><i
+                class="a-icon a-icon-star-small a-star-small-4-5 aok-align-bottom"><span class="a-icon-alt">4,3 de 5
+                  estrelas</span></i> </span><span aria-label="20 classificações"><span
+                class="a-size-mini a-color-base puis-light-weight-text">(20)</span></span></div>
+          </p>
+        </li>
+      </ul>
+    </main>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
